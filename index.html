@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos y de configuración -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  
+  <!-- SEO básico y Open Graph -->
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Portfolio profesional de María Martínez González, estudiante de Procesos de Ingeniería del Software">
+  <meta property="og:title" content="Portfolio de María Martínez González">
+  <meta property="og:description" content="Bienvenido a mi portfolio personal de desarrollo de software y proyectos">
+  
+  <title>Portfolio de María Martínez González</title>
+
+  <!-- Vinculación del archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado y Menú de navegación principal -->
+  <header>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Sección de presentación y sobre mí -->
+    <section id="sobre-mi">
+      <h1>Portfolio de María Martínez González</h1>
+      
+      <!-- Foto personal -->
+<!-- Foto personal -->
+<img src="foto.jpg" alt="Fotografía personal de María Martínez González" width="120" height="120" title="Foto de perfil">      
+      <p>
+        <strong>Estudiante de Procesos de Ingeniería del Software</strong>. Me apasiona el mundo de la informática porque me permite materializar ideas y resolver problemas reales a través del desarrollo de proyectos.
+      </p>
+
+      <!-- Tecnologías favoritas usando etiqueta aside -->
+      <aside>
+        <header>
+          <h3>Mis tecnologías favoritas</h3>
+        </header>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ol>
+      </aside>
+    </section>
+
+    <!-- Sección de experiencia profesional -->
+    <section id="experiencia">
+      <h2>Experiencia Profesional</h2>
+      <ul>
+        <li><strong>Profesora de Clases Particulares:</strong> Impartición de clases de apoyo académico, planificación de actividades y resolución de dudas.</li>
+        <li><strong>Socorrista:</strong> Prevención de accidentes, atención a usuarios y aplicación de protocolos de seguridad y primeros auxilios.</li>
+      </ul>
+    </section>
+
+    <!-- Sección de Proyectos estructurados con etiquetas semánticas -->
+    <section id="proyectos">
+      <h2>Proyectos Realizados</h2>
+
+      <article>
+        <header>
+          <h4>Gestor de Tareas Académicas</h4>
+        </header>
+        <p>Aplicación web interactiva para organizar entregas y proyectos universitarios según sus prioridades.</p>
+        <footer>
+          <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h4>Sistema de Control de Aforo y Seguridad</h4>
+        </header>
+        <p>Diseño conceptual de una herramienta para la gestión y supervisión de accesos en instalaciones deportivas y piscinas.</p>
+        <footer>
+          <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h4>Plataforma de Reservas de Clases</h4>
+        </header>
+        <p>Desarrollo del prototipo de una web para gestionar horarios y reservas de sesiones particulares.</p>
+        <footer>
+          <small>Tecnologías utilizadas: HTML, JavaScript</small>
+        </footer>
+      </article>
+    </section>
+
+    <!-- Preguntas Frecuentes usando details y summary -->
+    <section>
+      <h2>Preguntas Frecuentes</h2>
+      <details>
+        <summary>¿Cómo puedo contactar contigo?</summary>
+        <p>Puedes enviarme un correo directo a <a href="mailto:maria.martinez128@alu.uclm.es">maria.martinez128@alu.uclm.es</a> o completar el formulario de contacto.</p>
+      </details>
+      <details>
+        <summary>¿Qué tipo de proyectos me interesa desarrollar?</summary>
+        <p>Me interesan los proyectos que solucionen necesidades reales, desde aplicaciones web accesibles hasta desarrollo de software estructurado.</p>
+      </details>
+    </section>
+
+    <!-- Componente Modal Interactivo (Dialog) con JavaScript sencillo -->
+    <section>
+      <h2>Información Adicional</h2>
+      <button id="show">Ver más información</button>
+
+      <dialog id="modal">
+        <h3>Información nativa</h3>
+        <p style="margin: 1rem 0;">Este es un diálogo modal nativo abierto con JavaScript que demuestra interacción en la página.</p>
+        <button id="cerrar">Cerrar</button>
+      </dialog>
+
+      <script>
+        window.show.addEventListener('click', () => {
+          window.modal.showModal();
+        });
+        window.cerrar.addEventListener('click', () => {
+          window.modal.close();
+        });
+      </script>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto">
+      <h2>Formulario de contacto</h2>
+      <form method="post" action="/">
+        <fieldset>
+          <legend>Información personal</legend>
+          
+          <div>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+          </div>
+
+          <div>
+            <label for="em">Email:</label>
+            <input type="email" id="em" name="email" placeholder="maria.martinez128@alu.uclm.es" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros detalles</legend>
+
+          <div>
+            <label for="why">¿Sobre qué quieres contactar?:</label>
+            <select name="why" id="why">
+              <option value="1">Trabajo</option>
+              <option value="2">Consulta</option>
+              <option value="3">Otros</option>
+            </select>
+          </div>
+
+          <div>
+            <!-- Datalist para autocompletado de sugerencias -->
+            <datalist id="lang">
+              <option value="JavaScript"></option>
+              <option value="Python"></option>
+              <option value="C++"></option>
+            </datalist>
+            <label for="lang-input">¿En qué lenguaje necesitas ayuda?:</label>
+            <input list="lang" id="lang-input" name="lang">
+          </div>
+
+          <div>
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms" required>
+              Acepto los términos y condiciones
+            </label>
+          </div>
+        </fieldset>
+
+        <div>
+          <button type="submit">Enviar contacto</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>
