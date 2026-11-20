@@ -1,196 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Metadatos básicos y de configuración -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2563eb">
-  
-  <!-- SEO básico y Open Graph -->
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="Portfolio profesional de María Martínez González, estudiante de Procesos de Ingeniería del Software">
-  <meta property="og:title" content="Portfolio de María Martínez González">
-  <meta property="og:description" content="Bienvenido a mi portfolio personal de desarrollo de software y proyectos">
-  
-  <title>Portfolio de María Martínez González</title>
-
-  <!-- Vinculación del archivo CSS externo -->
+  <title>María Martínez González · Desarrolladora web</title>
+  <meta name="description" content="Portfolio de María Martínez González, estudiante de Ingeniería Informática. Proyectos web con JavaScript, Node.js y MongoDB.">
+  <meta property="og:title" content="María Martínez González · Portfolio">
+  <meta property="og:description" content="Proyectos web: Brote, InformatIA y ContraJuego. Pruébalos en directo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="foto.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Encabezado y Menú de navegación principal -->
-  <header>
+  <header class="top">
+    <a class="logo" href="#inicio">María Martínez</a>
     <nav>
       <a href="#sobre-mi">Sobre mí</a>
-      <a href="#experiencia">Experiencia</a>
+      <a href="#conocimientos">Conocimientos</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
     </nav>
   </header>
 
-  <!-- Contenido principal -->
   <main>
 
-    <!-- Sección de presentación y sobre mí -->
-    <section id="sobre-mi">
-      <h1>Portfolio de María Martínez González</h1>
-      
-      <!-- Foto personal -->
-<!-- Foto personal -->
-<img src="foto.jpg" alt="Fotografía personal de María Martínez González" width="120" height="120" title="Foto de perfil">      
-      <p>
-        <strong>Estudiante de Procesos de Ingeniería del Software</strong>. Me apasiona el mundo de la informática porque me permite materializar ideas y resolver problemas reales a través del desarrollo de proyectos.
-      </p>
-
-      <!-- Tecnologías favoritas usando etiqueta aside -->
-      <aside>
-        <header>
-          <h3>Mis tecnologías favoritas</h3>
-        </header>
-        <ol>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ol>
-      </aside>
+    <!-- 1. PRESENTACIÓN -->
+    <section id="inicio" class="hero">
+      <img src="foto.jpg" alt="Fotografía de María Martínez González" width="140" height="140" class="avatar">
+      <div>
+        <p class="eyebrow">Hola, soy</p>
+        <h1>María Martínez González</h1>
+        <p class="lead">Estudiante de Ingeniería Informática y desarrolladora web. Me gusta convertir ideas en proyectos completos, publicados y que cualquiera pueda usar.</p>
+        <p class="actions">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="#contacto">Contactar</a>
+        </p>
+      </div>
     </section>
 
-    <!-- Sección de experiencia profesional -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Estoy terminando Ingeniería Informática y quería ir más allá de los ejercicios de clase, así que he creado tres aplicaciones web completas: desde un buscador de herramientas de IA hasta una app de productividad con servidor, base de datos, tests y despliegue en la nube.</p>
+      <p>Lo que más he aprendido es corregir fallos reales al probar mis proyectos con otras personas y cuidar detalles que no se ven: seguridad, privacidad y que todo funcione bien en móvil.</p>
+      <p class="muted">Antes de programar he trabajado como profesora de clases particulares y como socorrista, lo que me ha dado paciencia, responsabilidad y buena comunicación.</p>
+    </section>
+
+    <!-- 2. CONOCIMIENTOS TÉCNICOS -->
+    <section id="conocimientos">
+      <h2>Conocimientos técnicos</h2>
+      <div class="skills">
+        <div class="card">
+          <h3>Frontend</h3>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Diseño responsive</li><li>Modo claro/oscuro</li><li>SEO básico</li></ul>
+        </div>
+        <div class="card">
+          <h3>Backend y datos</h3>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Mongoose</li><li>API REST</li><li>JWT</li></ul>
+        </div>
+        <div class="card">
+          <h3>Seguridad</h3>
+          <ul class="tags"><li>bcrypt</li><li>Helmet / CSP</li><li>OAuth con Google</li><li>Validación de entradas</li><li>RGPD</li></ul>
+        </div>
+        <div class="card">
+          <h3>Calidad y despliegue</h3>
+          <ul class="tags"><li>Git y GitHub</li><li>GitHub Actions (CI)</li><li>Jasmine + Supertest</li><li>Docker</li><li>Google Cloud Run</li><li>Cloudflare</li><li>Postman</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROYECTOS -->
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <p class="muted">Pulsa en «Probar» para usarlos en directo.</p>
+
+      <article class="project">
+        <div class="thumb t1">
+          <img src="img/brote.png" alt="Captura de Brote, app de productividad gamificada" loading="lazy" onerror="this.remove()">
+          <span>🌱</span>
+        </div>
+        <div class="body">
+          <h3>Brote</h3>
+          <p class="sub">Productividad gamificada · Proyecto de universidad</p>
+          <p>Completa tus tareas y haz crecer tu propio mundo; si fallas, se resiente. Eliges el escenario (huerto, ciudad, sistema solar, playa…) y cada uno guarda su progreso.</p>
+          <ul class="points">
+            <li>Tareas, Pomodoro fiable, estado de ánimo, estadísticas, XP y 10 logros.</li>
+            <li>Servidor como única fuente de verdad: «deshacer» es exacto y aguanta doble clic y varias pestañas.</li>
+            <li>Login con correo y con Google, panel de administración, 52 tests y CI en GitHub Actions.</li>
+          </ul>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Docker</li><li>Cloud Run</li></ul>
+          <p class="actions">
+            <!-- CAMBIA ESTA URL por la de tu despliegue en Cloud Run -->
+            <a class="btn primary" href="https://TU-URL-DE-BROTE.run.app" target="_blank" rel="noopener">Probar</a>
+            <!-- CAMBIA ESTA URL por la de tu repositorio de Brote -->
+            <a class="btn" href="https://github.com/MariaMartinez128/Brote" target="_blank" rel="noopener">Código</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="thumb t2">
+          <img src="img/contrajuego.png" alt="Captura de ContraJuego, creador y probador de contraseñas" loading="lazy" onerror="this.remove()">
+          <span>🛡️</span>
+        </div>
+        <div class="body">
+          <h3>ContraJuego</h3>
+          <p class="sub">Crea y pon a prueba tu contraseña</p>
+          <p>Un atacante simulado prueba 10.000 millones de combinaciones por segundo contra tu contraseña. Si es débil, pierdes; si es buena, ganas. También genera frases fáciles de recordar.</p>
+          <ul class="points">
+            <li>Generación con <code>crypto.getRandomValues</code>, sin sesgo estadístico.</li>
+            <li>Fortaleza según longitud, entropía, repeticiones, secuencias y años.</li>
+            <li>Todo en el navegador: no hay servidor y nada se envía ni se guarda.</li>
+          </ul>
+          <ul class="tags"><li>JavaScript</li><li>Criptografía en el navegador</li><li>Cloudflare</li></ul>
+          <p class="actions">
+            <a class="btn primary" href="https://contrajuego.maariamartinez6.workers.dev" target="_blank" rel="noopener">Probar</a>
+            <!-- CAMBIA ESTA URL por la de tu repositorio de ContraJuego -->
+            <a class="btn" href="https://github.com/MariaMartinez128/ContraJuego" target="_blank" rel="noopener">Código</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="thumb t3">
+          <img src="img/informatia.png" alt="Captura de InformatIA, buscador de herramientas de IA" loading="lazy" onerror="this.remove()">
+          <span>🔎</span>
+        </div>
+        <div class="body">
+          <h3>InformatIA</h3>
+          <p class="sub">Buscador de herramientas de IA</p>
+          <p>Escribes lo que quieres hacer (un logo, transcribir un audio, estudiar para un examen…) y la web te sugiere la herramienta que mejor encaja, con precio, ventajas, inconvenientes y alternativas.</p>
+          <ul class="points">
+            <li>Buscador propio en JavaScript que interpreta lo que necesita la persona.</li>
+            <li>Más de 40 herramientas en 14 categorías, con filtros por precio y registro.</li>
+            <li>Modo claro/oscuro, colores personalizables, SEO y vista previa al compartir.</li>
+          </ul>
+          <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>SEO</li><li>Cloudflare</li></ul>
+          <p class="actions">
+            <a class="btn primary" href="https://informatia.maariamartinez6.workers.dev" target="_blank" rel="noopener">Probar</a>
+            <!-- CAMBIA ESTA URL por la de tu repositorio de InformatIA -->
+            <a class="btn" href="https://github.com/MariaMartinez128/InformatIA" target="_blank" rel="noopener">Código</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
     <section id="experiencia">
-      <h2>Experiencia Profesional</h2>
-      <ul>
-        <li><strong>Profesora de Clases Particulares:</strong> Impartición de clases de apoyo académico, planificación de actividades y resolución de dudas.</li>
-        <li><strong>Socorrista:</strong> Prevención de accidentes, atención a usuarios y aplicación de protocolos de seguridad y primeros auxilios.</li>
+      <h2>Experiencia</h2>
+      <ul class="plain">
+        <li><strong>Profesora de clases particulares.</strong> Apoyo académico, planificación de actividades y resolución de dudas.</li>
+        <li><strong>Socorrista.</strong> Prevención de accidentes, atención a usuarios y protocolos de seguridad y primeros auxilios.</li>
       </ul>
     </section>
 
-    <!-- Sección de Proyectos estructurados con etiquetas semánticas -->
-    <section id="proyectos">
-      <h2>Proyectos Realizados</h2>
-
-      <article>
-        <header>
-          <h4>Gestor de Tareas Académicas</h4>
-        </header>
-        <p>Aplicación web interactiva para organizar entregas y proyectos universitarios según sus prioridades.</p>
-        <footer>
-          <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-        </footer>
-      </article>
-
-      <article>
-        <header>
-          <h4>Sistema de Control de Aforo y Seguridad</h4>
-        </header>
-        <p>Diseño conceptual de una herramienta para la gestión y supervisión de accesos en instalaciones deportivas y piscinas.</p>
-        <footer>
-          <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-        </footer>
-      </article>
-
-      <article>
-        <header>
-          <h4>Plataforma de Reservas de Clases</h4>
-        </header>
-        <p>Desarrollo del prototipo de una web para gestionar horarios y reservas de sesiones particulares.</p>
-        <footer>
-          <small>Tecnologías utilizadas: HTML, JavaScript</small>
-        </footer>
-      </article>
-    </section>
-
-    <!-- Preguntas Frecuentes usando details y summary -->
-    <section>
-      <h2>Preguntas Frecuentes</h2>
-      <details>
-        <summary>¿Cómo puedo contactar contigo?</summary>
-        <p>Puedes enviarme un correo directo a <a href="mailto:maria.martinez128@alu.uclm.es">maria.martinez128@alu.uclm.es</a> o completar el formulario de contacto.</p>
-      </details>
-      <details>
-        <summary>¿Qué tipo de proyectos me interesa desarrollar?</summary>
-        <p>Me interesan los proyectos que solucionen necesidades reales, desde aplicaciones web accesibles hasta desarrollo de software estructurado.</p>
-      </details>
-    </section>
-
-    <!-- Componente Modal Interactivo (Dialog) con JavaScript sencillo -->
-    <section>
-      <h2>Información Adicional</h2>
-      <button id="show">Ver más información</button>
-
-      <dialog id="modal">
-        <h3>Información nativa</h3>
-        <p style="margin: 1rem 0;">Este es un diálogo modal nativo abierto con JavaScript que demuestra interacción en la página.</p>
-        <button id="cerrar">Cerrar</button>
-      </dialog>
-
-      <script>
-        window.show.addEventListener('click', () => {
-          window.modal.showModal();
-        });
-        window.cerrar.addEventListener('click', () => {
-          window.modal.close();
-        });
-      </script>
-    </section>
-
-    <!-- Formulario de Contacto -->
+    <!-- 4 y 5. GITHUB, LINKEDIN Y CONTACTO -->
     <section id="contacto">
-      <h2>Formulario de contacto</h2>
-      <form method="post" action="/">
-        <fieldset>
-          <legend>Información personal</legend>
-          
-          <div>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
-          </div>
-
-          <div>
-            <label for="em">Email:</label>
-            <input type="email" id="em" name="email" placeholder="maria.martinez128@alu.uclm.es" required>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Otros detalles</legend>
-
-          <div>
-            <label for="why">¿Sobre qué quieres contactar?:</label>
-            <select name="why" id="why">
-              <option value="1">Trabajo</option>
-              <option value="2">Consulta</option>
-              <option value="3">Otros</option>
-            </select>
-          </div>
-
-          <div>
-            <!-- Datalist para autocompletado de sugerencias -->
-            <datalist id="lang">
-              <option value="JavaScript"></option>
-              <option value="Python"></option>
-              <option value="C++"></option>
-            </datalist>
-            <label for="lang-input">¿En qué lenguaje necesitas ayuda?:</label>
-            <input list="lang" id="lang-input" name="lang">
-          </div>
-
-          <div>
-            <label for="terms">
-              <input type="checkbox" id="terms" name="terms" required>
-              Acepto los términos y condiciones
-            </label>
-          </div>
-        </fieldset>
-
-        <div>
-          <button type="submit">Enviar contacto</button>
-        </div>
-      </form>
+      <h2>Contacto</h2>
+      <p>¿Tienes una oferta, una idea o quieres darme tu opinión sobre mis proyectos? Escríbeme.</p>
+      <p class="actions">
+        <a class="btn primary" href="mailto:maria.martinez128@alu.uclm.es">maria.martinez128@alu.uclm.es</a>
+        <a class="btn" href="https://github.com/MariaMartinez128" target="_blank" rel="noopener">GitHub</a>
+        <!-- CAMBIA TU-USUARIO por el de tu perfil de LinkedIn -->
+        <a class="btn" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
     </section>
 
   </main>
 
+  <footer>
+    <p>© <span id="year">2026</span> María Martínez González</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
